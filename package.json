@@ -11,7 +11,8 @@
   "description": "API de entregas de encomendasa",
   "dependencies": {
     "express": "4.21.1",
-    "express-async-errors": "3.1.1"
+    "express-async-errors": "3.1.1",
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@types/express": "5.0.0",
