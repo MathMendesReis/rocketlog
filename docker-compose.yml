@@ -1,11 +1,9 @@
 services:
-  api:
-    container_name: rocketlog
-    image: node
+  postgres:
+    image: "bitnami/postgresql:latest"
     ports:
-      - 3000:3000
-    volumes:
-      - .:/usr/src
-    working_dir: /usr/src
-    command: >
-      sh -c "tail -f /dev/null"
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=rocketlog
