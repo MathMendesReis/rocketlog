@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: rocketlog
+    image: node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src
+    working_dir: /usr/src
+    command: >
+      sh -c "tail -f /dev/null"
