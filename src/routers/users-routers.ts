@@ -1,10 +1,12 @@
 import { Router } from "express";
-import { UserController } from "@/controllers/users-controller";
+import { UserController } from "../controllers/users-controller";
+import { SessionController } from "../controllers/session-controller";
 
 const usersRouter = Router()
+const usersController = new UserController()
 
-const userController = new UserController()
 
-usersRouter.post("/",userController.create)
+usersRouter.post('/', usersController.create)
+
 
 export {usersRouter}
